@@ -1,9 +1,9 @@
-package mi_test
+package mgmt_test
 
 import (
 	"testing"
 
-	mi "github.com/adamwalach/go-openvpn/server/mi"
+	mi "github.com/pavel-d/go-openvpn/server/mgmt"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,4 +1,4 @@
-package mi
+package mgmt
 
 import (
 	"bufio"

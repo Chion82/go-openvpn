@@ -1,4 +1,4 @@
-package mi_test
+package mgmt_test
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	mi "github.com/adamwalach/go-openvpn/server/mi"
+	mgmt "github.com/pavel-d/go-openvpn/server/mgmt"
 	"github.com/stretchr/testify/assert"
 )
 
