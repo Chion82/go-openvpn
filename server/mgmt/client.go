@@ -7,15 +7,15 @@ import (
 
 //Client is used to connect to OpenVPN Management Interface
 type Client struct {
-	MINetwork string
-	MIAddress string
+	Protocol string
+	Address  string
 }
 
 //NewClient initializes Management Interface client structure
 func NewClient(network, address string) *Client {
 	c := &Client{
-		MINetwork: network, //Management Interface Network
-		MIAddress: address, //Management Interface Address
+		Protocol: network,
+		Address:  address,
 	}
 
 	return c
@@ -77,7 +77,7 @@ func (c *Client) Signal(signal string) error {
 
 //Execute connects to the OpenVPN server, sends command and reads response
 func (c *Client) Execute(cmd string) (string, error) {
-	conn, err := net.Dial(c.MINetwork, c.MIAddress)
+	conn, err := net.Dial(c.Protocol, c.Address)
 	if err != nil {
 		return "", err
 	}
